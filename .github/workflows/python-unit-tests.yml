@@ -42,14 +42,14 @@ jobs:
       - name: Test with pytest
         run: poetry run pytest -q --junitxml=pytest.xml  --cov=semantic_kernel --cov-report=term-missing:skip-covered ./tests/unit | tee python-coverage.txt
       - name: Upload coverage
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: python-coverage-${{ env.FILE_ID }}.txt
           path: python/python-coverage.txt
           overwrite: true
           retention-days: 1
       - name: Upload pytest.xml
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: pytest-${{ env.FILE_ID }}.xml
           path: python/pytest.xml
