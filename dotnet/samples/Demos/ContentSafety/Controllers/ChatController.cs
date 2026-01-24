@@ -10,7 +10,7 @@ namespace ContentSafety.Controllers;
 /// Sample chat controller.
 /// </summary>
 [ApiController]
-[Route("[controller]")]
+
 public class ChatController(Kernel kernel) : ControllerBase
 {
     private const string Prompt =
